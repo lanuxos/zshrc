@@ -7,7 +7,7 @@ export ZSH="/Users/la/.oh-my-zsh"
 export PATH="/Library/Frameworks/Python.framework/Versions/3.8/bin/:${PATH}"
 # Path to Sublime Text 3
 # export PATH="/Applications/Sublim Text.app/Contents/ShareSupport/bin:$SPATH"
-
+export PATH="/Library/PostgreSQL/13/bin:${PATH}"
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -84,7 +84,10 @@ plugins=(
   nmap
   node
   npm
-virtualenv
+  virtualenv
+  copydir
+  copyfile
+  pip
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -237,7 +240,14 @@ alias stopmongo="brew services stop mongodb-community"
 alias listallnpm="npm list -g --depth=0"
 alias listnpm="npm list --depth=0"
 
+alias gs='git status'
+alias ga='git add .'
+alias gc='git commit -m "fastCommit"'
+alias gp='git push'
+alias gitnow='git add . && git commit -m "fastCommit" && git push'
+
 export PATH="/usr/local/sbin:$PATH"
 
 alias editshell='open ~/.zshrc'
 alias updateshell='source ~/.zshrc'
+alias backupshell='cp ~/.zshrc ~/www/zshrc/zshrc'
