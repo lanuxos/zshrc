@@ -246,6 +246,8 @@ alias gc='git commit -m "fastCommit"'
 alias gp='git push'
 alias gitnow='git add . && git commit -m "fastCommit" && git push'
 
+alias systeminfo='system_profiler SPSoftwareDataType SPHardwareDataType'
+
 export PATH="/usr/local/sbin:$PATH"
 
 alias editshell='open ~/.zshrc'
